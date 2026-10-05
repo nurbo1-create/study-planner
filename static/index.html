@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Study Planner</h1>
+    <p class="subtitle">A simple full-stack task manager for study work.</p>
+
+    <form id="task-form" class="card">
+      <input id="title" placeholder="Task title" required />
+      <textarea id="description" placeholder="Description"></textarea>
+      <div class="row">
+        <select id="priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <input id="deadline" type="date" />
+        <button type="submit">Add task</button>
+      </div>
+    </form>
+
+    <div class="filters">
+      <button data-filter="">All</button>
+      <button data-filter="todo">To do</button>
+      <button data-filter="in_progress">In progress</button>
+      <button data-filter="done">Done</button>
+    </div>
+
+    <section id="task-list"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
